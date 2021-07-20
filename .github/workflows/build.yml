@@ -187,7 +187,60 @@ jobs:
       with:
         path: ./publish/
         name: Server
-    
+
+    - name: Upload Windows-Agent-x86
+      uses: actions/upload-artifact@v2
+      with:
+        path: ./publish/wwwroot/Content/Win-x86/Remotely_Desktop.exe
+        name: Windows-Agent-x86
+        
+    - name: Upload Windows-Agent-x64
+      uses: actions/upload-artifact@v2
+      with:
+        path: ./publish/wwwroot/Content/Win-x64/Remotely_Desktop.exe
+        name: Windows-Agent-x64
+        
+    - name: Upload Windows-Installer
+      uses: actions/upload-artifact@v2
+      with:
+        path: ./publish/wwwroot/Content/Remotely_Installer.exe
+        name: Windows-Installer
+        
+    - name: Upload Linux-Agent-x64
+      uses: actions/upload-artifact@v2
+      with:
+        path: ./publish/wwwroot/Content/Linux-x64/Remotely_Desktop
+        name: Linux-Agent-x64
+        
+    - name: Upload Windows-Agent-x86-Unpacked
+      uses: actions/upload-artifact@v2
+      with:
+        path: ./publish/wwwroot/Content/Remotely-Windows-x86.zip
+        name: Windows-Agent-x86-Unpacked
+        
+    - name: Upload Windows-Agent-x64-Unpacked
+      uses: actions/upload-artifact@v2
+      with:
+        path: ./publish/wwwroot/Content/Remotely-Windows-x64.zip
+        name: Windows-Agent-x64-Unpacked
+        
+    - name: Upload MacOS-Agent-x64-Unpacked
+      uses: actions/upload-artifact@v2
+      with:
+        path: ./publish/wwwroot/Content/Remotely-MacOS-x64.zip
+        name: MacOS-Agent-x64-Unpacked
+        
+    - name: Upload Linux-Agent-x64-Unpacked
+      uses: actions/upload-artifact@v2
+      with:
+        path: ./publish/wwwroot/Content/Remotely-Linux.zip
+        name: Linux-Agent-x64-Unpacked
+        
+    - name: Upload All Builds
+      uses: actions/upload-artifact@v2
+      with:
+        path: ./publish/wwwroot/Content
+        name: Builds
 
     # Remove the pfx
     - name: Remove the pfx
