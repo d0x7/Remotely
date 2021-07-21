@@ -215,13 +215,13 @@ jobs:
     - name: Upload Windows-Agent-x86-Unpacked
       uses: actions/upload-artifact@v2
       with:
-        path: ./publish/wwwroot/Content/Remotely-Windows-x86.zip
+        path: ./publish/wwwroot/Content/Remotely-Win10-x86.zip
         name: Windows-Agent-x86-Unpacked
         
     - name: Upload Windows-Agent-x64-Unpacked
       uses: actions/upload-artifact@v2
       with:
-        path: ./publish/wwwroot/Content/Remotely-Windows-x64.zip
+        path: ./publish/wwwroot/Content/Remotely-Win10-x64.zip
         name: Windows-Agent-x64-Unpacked
         
     - name: Upload MacOS-Agent-x64-Unpacked
